@@ -78,6 +78,16 @@ ul,li{
     height: 200px;
     object-fit: cover;
     border: 10px solid #000000;
+    animation: rotate 4s linear infinite;
+    object-fit: cover;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 .music__info-text{
     color: #ffffff;
@@ -123,8 +133,8 @@ ul,li{
 }
 .progress{
     width: 0;
-    height:6px;
-    background-color: rgba(184,160,34,1);
+    height:8px;
+    background-image :linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
     appearance: none;
     cursor: pointer;
     outline: none;
@@ -231,8 +241,11 @@ ul,li{
     color: #47494B;
     cursor: pointer;
 }
-.control__close:hover{
+.control__close:hover,
+.control__like:hover
+{
     color: #ffffff;
+    background: linear-gradient(315deg, rgba(230,85,12,1) 0%, rgba(196,38,17,1) 100%);
 }
 .control__img{
 
@@ -258,10 +271,10 @@ ul,li{
     cursor: pointer;
 }
 .navbar__item:hover{
-    background-color: #050606;
+    background-image :linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
 }
 .navbar__item.active{
-    background-color: #050606;
+    background-image :linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
 }
 .text__name{
     font-size: 1.8rem;

@@ -8,6 +8,9 @@
         max-width: 150px;
         height: 150px;
     }
+    .navbar__item{
+        margin-right: 20px;
+    }
 }
 @media(max-width:360px){
     .control{

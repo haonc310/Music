@@ -22,13 +22,59 @@ const songs = [
         singer : 'Cover'
     },
     {
-        src:'./assest/audio/Những bản nhạc Chill Acoustic gây nghiện ♬ Những tình khúc cũ thời 8x 9x đời đầu hay nhất.mp3',
-        title:'Những Bản Hit Cover Acoustic Thế Hệ 8x 9x Nhẹ Nhàng Sâu Lắng Hay Nhất 2019',
+        src:'./assest/audio/Những bản nhạc Chill Acoustic gây nghiện ♬ Những tình khúc cũ thời 8x 9x đời đầu hay nhất version 2.mp3',
+        title:'Những bản nhạc Chill Acoustic gây nghiện ♬ Những tình khúc cũ thời 8x 9x đời đầu hay nhất version 2',
         singer : 'Cover'
     },
     {
-        src:'./assest/audio/Những bản nhạc Chill Acoustic gây nghiện ♬ Những tình khúc cũ thời 8x 9x đời đầu hay nhất version 2.mp3',
-        title:'Những bản nhạc Chill Acoustic gây nghiện ♬ Những tình khúc cũ thời 8x 9x đời đầu hay nhất version 2',
+        src:'./assest/audio/Bỏ lỡ một người.mp3',
+        title:'Bỏ lỡ một người',
+        singer : 'Cover'
+    },
+    {
+        src:'./assest/audio/Bông hoa đẹp nhất.mp3',
+        title:'Bông hoa đẹp nhất',
+        singer : 'Cover'
+    },
+    {
+        src:'./assest/audio/Buồn thì cứ khóc.mp3',
+        title:'Buồn thì cứ khóc',
+        singer : 'Cover'
+    },
+    {
+        src:'./assest/audio/Con xin mẹ tha lỗi.mp3',
+        title:'Con xin mẹ tha lỗi',
+        singer : 'Cover'
+    },
+    {
+        src:'./assest/audio/Đêm trăng tình yêu.mp3',
+        title:'Đêm trăng tình yêu',
+        singer : 'Cover'
+    },
+    {
+        src:'./assest/audio/Gánh mẹ.mp3',
+        title:'Gánh mẹ',
+        singer : 'Cover'
+    }
+    ,
+    {
+        src:'./assest/audio/Giật mình trong đêm.mp3',
+        title:'Giật mình trong đêm',
+        singer : 'Cover'
+    },
+    {
+        src:'./assest/audio/Mộng thủy tinh.mp3',
+        title:'Mộng thủy tinh',
+        singer : 'Cover'
+    },
+    {
+        src:'./assest/audio/Mùa đông không lạnh.mp3',
+        title:'Mùa đông không lạnh',
+        singer : 'Cover'
+    },
+    {
+        src:'./assest/audio/Người tình mùa đông.mp3',
+        title:'Người tình mùa đông',
         singer : 'Cover'
     }
 ]

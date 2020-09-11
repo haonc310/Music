@@ -13,6 +13,11 @@ const progressBar = document.getElementById('progressBar');
 const songs = [
     {
         src:'./assest/audio/Hoa Nở Không Màu - Hoài Lâm - Acoustic Version.mp3',
+        title:'Hoa Nở Không Màu',
+        singer : 'Cover'
+    },
+    {
+        src:'./assest/audio/20 BẢN ACOUSTIC COVER BẤT HỦ HAY NHẤT DÀNH CHO 8X 9X.mp3',
         title:'Những Bản Hit Cover Acoustic Thế Hệ 8x 9x Nhẹ Nhàng Sâu Lắng Hay Nhất 2019',
         singer : 'Cover'
     }

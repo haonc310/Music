@@ -36,6 +36,7 @@ ul,li{
     background-color: #050606;
     border-radius: 30px;
     box-shadow: inset 1px 1px 3px #47494B , inset  -1px -1px 3px #47494B;
+    box-sizing: border-box;
 }
 .music__heading{
     display: flex;

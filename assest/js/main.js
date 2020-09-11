@@ -10,22 +10,28 @@ const singer = document.getElementById('singer');
 
 const progress = document.getElementById('progress');
 const progressBar = document.getElementById('progressBar');
+
+const button = document.getElementById('button');
+const navbar = document.getElementById('navbar');
+const navbarList = document.getElementById('navbarList');
+const close  = document.getElementById('close');
 const songs = [
     {
         src:'./assest/audio/Hoa Nở Không Màu - Hoài Lâm - Acoustic Version.mp3',
         title:'Hoa Nở Không Màu',
         singer : 'Hoài Lâm'
     },
-    {
-        src:'./assest/audio/20 BẢN ACOUSTIC COVER BẤT HỦ HAY NHẤT DÀNH CHO 8X 9X.mp3',
-        title:'Những Bản Hit Cover Acoustic Thế Hệ 8x 9x Nhẹ Nhàng Sâu Lắng Hay Nhất 2019',
-        singer : 'Cover'
-    },
-    {
-        src:'./assest/audio/Những bản nhạc Chill Acoustic gây nghiện ♬ Những tình khúc cũ thời 8x 9x đời đầu hay nhất version 2.mp3',
-        title:'Những bản nhạc Chill Acoustic gây nghiện ♬ Những tình khúc cũ thời 8x 9x đời đầu hay nhất version 2',
-        singer : 'Cover'
-    },
+    // },
+    // {
+    //     src:'./assest/audio/20 BẢN ACOUSTIC COVER BẤT HỦ HAY NHẤT DÀNH CHO 8X 9X.mp3',
+    //     title:'Những Bản Hit Cover Acoustic Thế Hệ 8x 9x Nhẹ Nhàng Sâu Lắng Hay Nhất 2019',
+    //     singer : 'Cover'
+    // },
+    // {
+    //     src:'./assest/audio/Những bản nhạc Chill Acoustic gây nghiện ♬ Những tình khúc cũ thời 8x 9x đời đầu hay nhất version 2.mp3',
+    //     title:'Những bản nhạc Chill Acoustic gây nghiện ♬ Những tình khúc cũ thời 8x 9x đời đầu hay nhất version 2',
+    //     singer : 'Cover'
+    // },
     {
         src:'./assest/audio/Bỏ lỡ một người.mp3',
         title:'Bỏ lỡ một người',
@@ -143,6 +149,12 @@ const app = {
             alert("Bạn vui lòng chạy nhạc");
         }
     },
+    handleClass : function(NavbarItem) {
+        for(let i=0 ; i<NavbarItem.length; i++){
+            NavbarItem[i].classList.remove('active');
+        }
+        NavbarItem[currentIndex].classList.add('active');
+    },
     timeUpdate : function() {
         if(isPlaying){
             let totalSeconds   = app.smartTime(Math.floor(player.duration % 60));
@@ -168,11 +180,11 @@ const app = {
         }
         if(Math.floor(player.currentTime) === Math.floor(player.duration)){
             app.next();
+            app.handleClass(NavbarItem);
         }
         progress.style.width = (player.currentTime / player.duration)*100 + "%";
     }
 }
-player.addEventListener('timeupdate' ,app.timeUpdate)
 progressBar.addEventListener('click',app.setProgressBar)
 play.addEventListener('click' , () =>{
     app.play();
@@ -186,3 +198,45 @@ prev.addEventListener('click' , () =>{
 next.addEventListener('click' , () =>{
     app.next();
 })
+button.addEventListener('click', () =>{
+    navbar.classList.add('active');
+})
+close.addEventListener('click', () =>{
+    navbar.classList.remove('active');
+})
+songs.forEach((song, index) =>{
+    const li = document.createElement('li')
+    const text = document.createElement('div')
+    const button = document.createElement('div')
+    const h4 = document.createElement('h4')
+    const p = document.createElement('p')
+    const i = document.createElement('i');
+    if(index === currentIndex) {
+        li.classList.add('active')
+    }
+    h4.textContent = song.title;
+    p.textContent = song.singer;
+    li.classList.add('navbar__item');
+    text.classList.add('navar__item-text');
+    button.classList.add('navar__item-button');
+    h4.classList.add('text__name');
+    p.classList.add('text__singer');
+    text.appendChild(h4);
+    text.appendChild(p);
+    button.appendChild(i);
+    li.appendChild(text);
+    li.appendChild(button)
+    navbarList.appendChild(li);
+})
+
+const NavbarItem = document.querySelectorAll('.navbar__item');
+NavbarItem.forEach((item,index) =>{
+    item.addEventListener('click' , () =>{
+        app.handleClass(NavbarItem);
+        navbar.classList.remove('active');
+        currentIndex = index;
+        app.loadSongs(currentIndex);
+        app.play();
+    })
+})
+player.addEventListener('timeupdate' ,app.timeUpdate)

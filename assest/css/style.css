@@ -28,6 +28,8 @@ ul,li{
     justify-content: center;
 }
 .music{
+    position: relative;
+    overflow: hidden;
     padding: 20px;
     width: 350px;
     height: 650px;
@@ -52,6 +54,7 @@ ul,li{
     align-items: center;
     justify-content: center;
     font-size: 1.4rem;
+    cursor: pointer;
 }
 .music__heading-title{
     text-transform: uppercase;
@@ -176,4 +179,109 @@ ul,li{
 }
 #pause{
     display: none;
+}
+.music__navbar{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #1D2021;
+    box-shadow: inset 1px 1px 3px #47494B , inset  -1px -1px 3px #47494B;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    transition: 0.5s ease;
+    padding: 20px;
+    overflow: auto;
+}
+.music__navbar.active{
+    transform: translateX(0);
+}
+.close{
+    color: #ffffff;
+    font-size: 2rem;
+}
+.music__navbar-heading{
+    text-align: center;
+    color: #47494B;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding-top: 15px;
+}
+.music__navbar-controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #ffffff;
+    margin-top: 60px;
+}
+.control__like,
+.control__close{
+    background-color: #050606;
+    box-shadow: inset 1px 1px 3px #47494B , inset  -1px -1px 3px #47494B;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #47494B;
+    cursor: pointer;
+}
+.control__close:hover{
+    color: #ffffff;
+}
+.control__img{
+
+}
+.control__img img {
+    max-width: 100px;
+    border-radius: 50%;
+    height: 100px;
+    border: 10px solid #000000;
+}
+.navbar__list{
+    padding-right:20px;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+.navbar__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.navbar__item:hover{
+    background-color: #050606;
+}
+.navbar__item.active{
+    background-color: #050606;
+}
+.text__name{
+    font-size: 1.8rem;
+    margin: 0;
+}
+.text__singer{
+    color: #47494B;
+    font-size: 1.4rem;
+}
+.navar__item-button{
+    background-color: #050606;
+    box-shadow: inset 1px 1px 3px #47494B , inset  -1px -1px 3px #47494B;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #47494B;
+    cursor: pointer;
+    color: #ffffff;
 }

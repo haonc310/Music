@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./assest/css/style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="music">
+            <div class="music__heading">
+                <div class="music__heading-button">
+                    <i class="fas fa-long-arrow-alt-left"></i>
+                </div>
+                <div class="music__heading-title">
+                    Playing Now
+                </div>
+                <div class="music__heading-button">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="music__info">
+                <div class="music__info-img">
+                    <img src="./assest/img/img.jpg" alt="">
+                </div>
+                <div class="music__info-text" >
+                    <h2 class="text__name" id="nameSong">
+                        Chẳng còn gì cho nhau
+                    </h2>
+                    <p class="text-songs" id="singer">
+                        Đông Nhi
+                    </p>
+                </div>
+            </div>
+            <div class="music__time">
+                <span class="music__time-start" id="startTime">
+                    00:00
+                </span>
+                <span class="music__time-end" id="totalTime">
+                    4:32
+                </span>
+            </div>
+            <div class="music__progress">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress" id="progress">
+
+                    </div>
+                </div>
+            </div>
+            <div class="music__controls">
+                <div class="controls">
+                    <div class="control controls__left" id="prev">
+                        <i class="fas fa-backward"></i>
+                    </div>
+                    <div class="control controls__center" id="play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="control controls__center" id="pause">
+                        <i class="fas fa-pause"></i>
+                    </div>
+                    <div class="control controls__right" id="next">
+                        <i class="fas fa-forward"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assest/js/main.js"></script>
+</body>
+</html>

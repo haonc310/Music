@@ -20,10 +20,15 @@ const songs = [
         src:'./assest/audio/20 BẢN ACOUSTIC COVER BẤT HỦ HAY NHẤT DÀNH CHO 8X 9X.mp3',
         title:'Những Bản Hit Cover Acoustic Thế Hệ 8x 9x Nhẹ Nhàng Sâu Lắng Hay Nhất 2019',
         singer : 'Cover'
-    }
+    },
     {
         src:'./assest/audio/Những bản nhạc Chill Acoustic gây nghiện ♬ Những tình khúc cũ thời 8x 9x đời đầu hay nhất.mp3',
         title:'Những Bản Hit Cover Acoustic Thế Hệ 8x 9x Nhẹ Nhàng Sâu Lắng Hay Nhất 2019',
+        singer : 'Cover'
+    },
+    {
+        src:'./assest/audio/Những bản nhạc Chill Acoustic gây nghiện ♬ Những tình khúc cũ thời 8x 9x đời đầu hay nhất version 2.mp3',
+        title:'Những bản nhạc Chill Acoustic gây nghiện ♬ Những tình khúc cũ thời 8x 9x đời đầu hay nhất version 2',
         singer : 'Cover'
     }
 ]
